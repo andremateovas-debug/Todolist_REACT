@@ -4,12 +4,14 @@ import { useState, useEffect} from 'react'
 
 function Header() {
   return (
-    <header>
-      <h1>Lista de tareas!</h1>
+    <header className='rounded-lg border-2 border-black bg-white p-7 text-center text-black text-5xl font-bold m-15'>
+      <h1 className=''>Lista de tareas!</h1>
     </header>
   )
 }
 
+
+// ESTILOS: bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition duration-200 cursor-pointer font-medium
 
 // Aqui cree una funcion modificable a futuro para reutilizar css por ejemplo pero modificar texto,
 // Cree una funcion Text y agregue una variable modificable ({texto})
@@ -54,56 +56,51 @@ function Contador() {
   useEffect(() => {
       console.log("Tarea agregada: " + Infotarea);
     }, [Tareas]);
-
-
-
   function agregarTarea() {
+    if (Infotarea.trim() === "") {
+      alert("No es posible ingresar una tarea vacia");
+      return;
+    }
     setTareasiniciales(Contador + 1)
     setTareas([...Tareas, Infotarea])
-    setContenidodelatarea("")
-    
+    setContenidodelatarea("")   
   }
-
-
-
   function eliminarTarea(){
   if (Contador > 0) {
     setTareasiniciales(Contador - 1)
     setTareas(Tareas.slice(0, -1))
     }
   else {alert("No hay tareas para eliminar")}
-  }
-  
-  
-  
+  } 
   function reiniciarContador() {
     setTareasiniciales(0)
     setTareas([]) 
   }
-
   return (
-    <section>
+    <section className='rounded-lg border-black-500 border-2 bg-white p-4 m-4 text-left pl-5'>
     
-    <div className = "titulodeldiv" >
-    <h2>Panel para aregar tareas</h2>
+    <div className='text-left text-white text-2xl font-bold mb-4 p-3 pl-3 '>
+      <h2 className='text-black '>Panel para agregar tareas</h2>
     </div>
     
-    <input type="text" placeholder='Ingrese el nombre de la tarea' value={Infotarea} onChange={(e) => setContenidodelatarea(e.target.value)} />
-    <p>Vista previa del contenido: {Infotarea}</p>
-    <button onClick={agregarTarea} >Agregar tarea </button> 
+    <input className='border-1 rounded-lg pl-9 pr-9 w-100'type="text" placeholder='Ingresar el nombre de la tarea/contenido' value={Infotarea} onChange={(e) => setContenidodelatarea(e.target.value)} />
+    
+    <p className='p-3'>Vista previa del contenido: {Infotarea}</p>
+    
+    <button className='border-1 rounded-lg pl-9 pr-9 w-70 p-2 mt-1' onClick={agregarTarea} >Agregar tarea </button> 
     <p></p>
 
-    <button onClick = {reiniciarContador} > Reiniciar contador </button>
+    <button className='border-1 rounded-lg pl-9 pr-9 w-70 p-2 mt-3' onClick = {reiniciarContador} > Reiniciar contador </button>
     <p></p> 
-    <button onClick = {eliminarTarea} > Eliminar tarea mas reciente </button>
+    <button className='border-1 rounded-lg pl-9 pr-9 w-100 p-2 mt-3' onClick = {eliminarTarea} > Eliminar tarea mas reciente </button>
     
-    <p>Cuantas tareas tienes? : {Contador} </p>
+    <p className='border-1 rounded-lg pl-9 pr-9 w-100 mt-5'>Cantidad de tareas actuales: {Contador} </p>
     
     
 
-    <ul>
+    <ul className='border-1 rounded-lg pl-9 pr-9 w-100 mt-5'>
       {Tareas.map((tarea, index) => (
-        <li key={index}>{tarea}</li>
+        <li key={index}> {index} - {tarea}</li>
       ))}
     </ul>
     
@@ -118,25 +115,22 @@ function Contador() {
 
 function Footer() {
   return (
-    <footer>
-      <p>AM Devs</p>
+    <footer className='bg-black text-white text-center p-4'>
+      <p>AM Devs - Andre Mateo Vasquez Mosqueda</p>
     </footer>
   ) 
 }
 
 
+
+
 function App() {
   return (
-    <div>
+    <section className='bg-blue-100 min-h-screen flex flex-col justify-between'>
       <Header />
-      <Text texto = "Texto editado por primera vez"/>
-      <Text texto = "Hola esto es lo mismo pero editado el texto 2da vez"/>
-      <Text texto = "APRENDI A HARCODEAR Y REEMPLZAR UN TEXTO VAMOS!!"/>
-      <h1> ------------------------------------------------ </h1>
       <Contador />
-      <h1> ------------------------------------------------ </h1>
       <Footer />
-    </div>
+    </section>
   )
 }
 
