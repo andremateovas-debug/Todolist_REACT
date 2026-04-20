@@ -1,15 +1,22 @@
 # React + Vite
 
-Andre Mateo Proyecto para dar a conocer sus conocimientos en REact.
+Andre Mateo Proyecto para dar a conocer sus conocimientos en React|Node.js
 
-## COmpilacion/instalacion 
+## Compilacion/instalacion 
 
-Se a creado el repositorio en GITHUB y se inicio la clonacion y ejecucion para instalar React y vite para tener todo corriendo.
+Se a creado el repositorio en GITHUB y se inicio la clonacion y ejecucion para instalar React y vite para test local.
 
-pwd verificar la ubicacion
 
-npm create vite@latest . (aqui) -- --template react
-y lsto, ya react ya instala todo (perdon Node)
+Se utiliza VS Code para el desarrollo y manejo de git.
+
+
+## EJECUCIOENS EN TERMINAL CONTROL + J (VS CODE)
+
+se ejecuto `pwd` para verificar la ubicacion
+
+se ejecuto `npm create vite@latest . -- --template react`
+
+se uso `npm run dev` para empezar.
 
 ## Seccion de pruebas y testing
 
@@ -41,16 +48,17 @@ Las tareas se renderizan con `.map()` directamente en el JSX dentro de un `<ul>`
 Se implemento un `useEffect` con dependencia en `[Tareas]` para ejecutar logica cada vez que la lista de tareas cambia.
 
 ### Tailwind CSS
-Se integro Tailwind CSS v4 via `@tailwindcss/vite` para el estilado de componentes directamente en el JSX usando `className`.
+Se integro Tailwind CSS v4 via `@tailwindcss/vite` para el estilado de componentes directamente en el JSX usando `className`. Se aplicaron estilos a todos los componentes: Header, Footer, Contador, botones, input y lista de tareas.
 
 ## Funcionalidades del gestor de tareas
 
 - Agregar tareas con un input controlado
 - Vista previa del texto antes de agregar
-- Lista de tareas renderizada dinamicamente
+- Lista de tareas renderizada dinamicamente con indice visible
 - Contador de tareas activas
 - Eliminar la tarea mas reciente
 - Reiniciar toda la lista
+- Validacion: no permite tareas vacias (trim)
 - Validacion: no permite contador en negativo
 
 ## Stack usado

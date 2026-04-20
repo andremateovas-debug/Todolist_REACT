@@ -87,12 +87,12 @@ function Contador() {
     
     <p className='p-3'>Vista previa del contenido: {Infotarea}</p>
     
-    <button className='border-1 rounded-lg pl-9 pr-9 w-70 p-2 mt-1' onClick={agregarTarea} >Agregar tarea </button> 
+    <button className='border-1 bg-green-300 rounded-lg pl-9 pr-9 w-70 p-2 mt-1' onClick={agregarTarea} >Agregar tarea </button> 
     <p></p>
 
-    <button className='border-1 rounded-lg pl-9 pr-9 w-70 p-2 mt-3' onClick = {reiniciarContador} > Reiniciar contador </button>
+    <button className='border-1 bg-red-300 rounded-lg pl-9 pr-9 w-70 p-2 mt-3' onClick = {reiniciarContador} > Reiniciar contador </button>
     <p></p> 
-    <button className='border-1 rounded-lg pl-9 pr-9 w-100 p-2 mt-3' onClick = {eliminarTarea} > Eliminar tarea mas reciente </button>
+    <button className='border-1 bg-yellow-300 rounded-lg pl-9 pr-9 w-100 p-2 mt-3' onClick = {eliminarTarea} > Eliminar tarea mas reciente </button>
     
     <p className='border-1 rounded-lg pl-9 pr-9 w-100 mt-5'>Cantidad de tareas actuales: {Contador} </p>
     
