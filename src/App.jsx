@@ -4,7 +4,7 @@ import { useState, useEffect} from 'react'
 
 function Header() {
   return (
-    <header className='bg-white p-7  border-2   text-center text-black text-5xl font-bold m-3'>
+    <header className='bg-white p-7  border-2   text-center text-black text-3xl md:text-5xl font-bold m-3'>
       <h1 className=''>Lista de tareas!</h1>
     </header>
   )
@@ -77,7 +77,7 @@ function Contador() {
     setTareas([]) 
   }
   return (
-    <section className='rounded-lg border-black-500 border-2 bg-white p-4 m-4 text-left container mx-auto max-w-lg'>
+    <section className=' text-2xl md:text-1xl rounded-lg border-black-500 border-2 bg-white p-4 m-4 text-left container mx-auto max-w-lg'>
     
       <div className='text-left text-white text-2xl font-bold mb-4 p-3 pl-3 '>
         <h2 className='text-black '>Panel para agregar tareas</h2>
