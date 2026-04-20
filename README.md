@@ -1,6 +1,13 @@
+
+
 # React + Vite
 
 Andre Mateo Proyecto para dar a conocer sus conocimientos en React|Node.js
+
+
+## AVISO
+
+`ES LOCAL, NO SE GUARDA NI HAY HISTORIAL DE TAREAS`
 
 ## Compilacion/instalacion 
 
