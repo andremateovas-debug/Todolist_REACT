@@ -14,3 +14,6 @@ y lsto, ya react te instala todo (perdon Node)
 ## Seccion de pruebas y testing
 
 Se estara diseñando un pequeño sistema de gestor de tareas usando como base React para mostrar el conocimiento y dominio base de REACT.
+
+
+## PRONTO SE ACTUALIZARA ESTE README PARA DAR A CONOCER CADA PUSH Y COMMIT. POR AHORA EL PROYECTO ESTA VACIO!
