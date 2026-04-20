@@ -4,7 +4,7 @@ import { useState, useEffect} from 'react'
 
 function Header() {
   return (
-    <header className='rounded-lg border-2 border-black bg-white p-7 text-center text-black text-5xl font-bold m-3'>
+    <header className='bg-blue-100 p-7 text-center text-black text-5xl font-bold m-3'>
       <h1 className=''>Lista de tareas!</h1>
     </header>
   )
@@ -83,22 +83,27 @@ function Contador() {
         <h2 className='text-black '>Panel para agregar tareas</h2>
       </div>
       
-      <input className='border-1 rounded-lg pl-9 pr-9 w-100'type="text" placeholder='Ingresar el nombre de la tarea/contenido' value={Infotarea} onChange={(e) => setContenidodelatarea(e.target.value)} />
+      <input className='border-1  text-center rounded-lg pl-9 pr-9 w-full'type="text" placeholder='Ingresar el nombre de la tarea/contenido' value={Infotarea} onChange={(e) => setContenidodelatarea(e.target.value)} />
       
       <p className='p-3'>Vista previa del contenido: {Infotarea}</p>
       
-      <button className='border-1 bg-green-300 rounded-lg pl-9 pr-9 w-70 p-2 mt-1' onClick={agregarTarea} >Agregar tarea </button> 
-      <p></p>
 
-      <button className='border-1 bg-red-300 rounded-lg pl-9 pr-9 w-70 p-2 mt-3' onClick = {reiniciarContador} > Reiniciar contador </button>
-      <p></p> 
-      <button className='border-1 bg-yellow-300 rounded-lg pl-9 pr-9 w-100 p-2 mt-3' onClick = {eliminarTarea} > Eliminar tarea mas reciente </button>
+
+
+      <button className='border-1 bg-green-300 rounded-lg pl-9 pr-9 w-full p-2 mt-3' onClick={agregarTarea} >Agregar tarea </button> 
+
+      <button className='border-1 bg-red-300 rounded-lg pl-9 pr-9 w-full p-2 mt-3' onClick = {reiniciarContador} > Reiniciar contador </button>
       
-      <p className='border-1 rounded-lg pl-9 pr-9 w-100 mt-5'>Cantidad de tareas actuales: {Contador} </p>
+      <button className='border-1 bg-yellow-300 rounded-lg pl-9 pr-9 w-full p-2 mt-3' onClick = {eliminarTarea} > Eliminar tarea mas reciente </button>
+      
+
+
+
+      <p className='border-1 rounded-lg pl-9 pr-9 w-100 mt-8'>Cantidad de tareas actuales: {Contador} </p>
       
       
 
-      <ul className='border-1 rounded-lg pl-9 pr-9 w-100 mt-5'>
+      <ul className='border-1 rounded-lg pl-9 pr-9 w-100 mt-2'>
         {Tareas.map((tarea, index) => (
           <li key={index}> {index} - {tarea}</li>
         ))}
@@ -115,22 +120,23 @@ function Contador() {
 
 function Footer() {
   return (
-    <footer className='bg-black text-white text-center p-4'>
-      <p>AM Devs - Andre Mateo Vasquez Mosqueda</p>
+    <footer className='bg-black text-white text-center p-7 w-full justify-end mt-auto'>
+      <p>AM Devs - Andre Mateo Vasquez Mosqueda - 2026</p>
     </footer>
   ) 
 }
 
 
 
-
+// PRINCIPAL
 function App() {
   return (
-    <section className='bg-blue-100 min-h-screen flex flex-col justify-between'>
+    <section className='bg-blue-100 min-h-screen flex flex-col justify-start items-center'>
       <Header />
       <Contador />
-      <Footer />
+      <Footer/>
     </section>
+      
   )
 }
 
