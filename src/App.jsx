@@ -4,7 +4,7 @@ import { useState, useEffect} from 'react'
 
 function Header() {
   return (
-    <header className='bg-blue-100 p-7 text-center text-black text-5xl font-bold m-3'>
+    <header className='bg-white p-7  border-2   text-center text-black text-5xl font-bold m-3'>
       <h1 className=''>Lista de tareas!</h1>
     </header>
   )
@@ -90,11 +90,13 @@ function Contador() {
 
 
 
-      <button className='border-1 bg-green-300 rounded-lg pl-9 pr-9 w-full p-2 mt-3' onClick={agregarTarea} >Agregar tarea </button> 
+      <button className='border-1 bg-green-300 rounded-lg pl-9 pr-9 w-full p-2 mt-3 cursor-pointer' onClick={agregarTarea} >Agregar tarea </button> 
 
-      <button className='border-1 bg-red-300 rounded-lg pl-9 pr-9 w-full p-2 mt-3' onClick = {reiniciarContador} > Reiniciar contador </button>
+
+      <button className='border-1 bg-red-300 rounded-lg pl-9 pr-9 w-full p-2 mt-3 cursor-pointer' onClick = {reiniciarContador} > Reiniciar contador </button>
       
-      <button className='border-1 bg-yellow-300 rounded-lg pl-9 pr-9 w-full p-2 mt-3' onClick = {eliminarTarea} > Eliminar tarea mas reciente </button>
+
+      <button className='border-1 bg-yellow-300 rounded-lg pl-9 pr-9 w-full p-2 mt-3 cursor-pointer' onClick = {eliminarTarea} > Eliminar tarea mas reciente </button>
       
 
 
