@@ -1,6 +1,6 @@
+# AUN EN DESARROLLO
 
-
-# React + Vite
+## React + Vite
 
 Andre Mateo Proyecto para dar a conocer sus conocimientos en React|Node.js
 
